@@ -140,6 +140,9 @@
     <Content Include="Views\Default\DeletePhone.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ProblemDecision\ProblemDecision.cshtml" />
+    <Content Include="Views\ProblemDecision\AddProblemDecision.cshtml" />
+    <Content Include="Views\ProblemDecision\EditProblemDecision.cshtml" />
+    <Content Include="Views\ProblemDecision\DeleteProblemDecision.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

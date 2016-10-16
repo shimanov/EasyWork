@@ -23,13 +23,13 @@ namespace WebApplication2.IoC
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
         {
-            return controllerType == null
-                ? null
-                : (IController)_kernel.Get(controllerType);
+            //return controllerType == null
+            //    ? null
+            //    : (IController)_kernel.Get(controllerType);
 
-            //if (controllerType == null)
-            //    return null;
-            //return (IController) _kernel.Get(controllerType);
+            if (controllerType == null)
+                return null;
+            return (IController)_kernel.Get(controllerType);
         }
 
         private void AddBindings()
@@ -39,6 +39,9 @@ namespace WebApplication2.IoC
             _kernel.Bind<IEasyWorkRepository>().To<EasyWorkRepository>();
             _kernel.Bind<IEasyWorkServices>().To<IEasyWorkServices>();
             _kernel.Bind<IPhoneBookService>().To<PhoneBookService>();
+
+            _kernel.Bind<IProblemDecisionRepository>().To<ProblemDecisionRepository>();
+            _kernel.Bind<IProblemDecisionServices>().To<ProblemDecisionServices>();
         }
 
         

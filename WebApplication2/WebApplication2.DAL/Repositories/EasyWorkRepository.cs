@@ -119,106 +119,102 @@ namespace WebApplication2.DAL.Repositories
 
         #region ProblemDecision
 
-        //public IEnumerable<ProblemDecision> GetDecisions()
-        //{
-        //    return _context.ProblemDecisions.ToArray();
-        //}
+        public IEnumerable<ProblemDecision> GetProblemDecisions()
+        {
+            return _context.ProblemDecisions.ToArray();
+        }
 
-        //public IEnumerable<ProblemDecision> GetDecisions(Func<ProblemDecision, bool> func)
-        //{
-        //    return _context.ProblemDecisions.Where(func).ToArray();
-        //}
+        public IEnumerable<ProblemDecision> GetProblemDecisions(Func<ProblemDecision, bool> func)
+        {
+            return _context.ProblemDecisions.Where(func).ToArray();
+        }
 
-        //public ProblemDecision GetDecision(int id)
-        //{
-        //    return _context.ProblemDecisions.FirstOrDefault(x => x.Id == id);
-        //}
+        public ProblemDecision GetProblemDecision(int id)
+        {
+            return _context.ProblemDecisions.FirstOrDefault(x => x.Id == id);
+        }
 
-        //public ProblemDecision GetDecision(string problem)
-        //{
-        //    return _context.ProblemDecisions
-        //        .FirstOrDefault(x => x.Problem
-        //            .Trim().ToLower() == problem
-        //                .Trim().ToLower());
-        //}
+        public ProblemDecision GetProblemDecision(string problem)
+        {
+            return _context.ProblemDecisions
+                .FirstOrDefault(x =>
+                    x.Problem.Trim().ToLower() == problem.ToLower().Trim());
+        }
 
-        //public bool AddProblem(ProblemDecision problem)
-        //{
-        //    try
-        //    {
-        //        _context.ProblemDecisions.Add(problem);
-        //        _context.SaveChanges();
-
-        //        return true;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //        throw;
-        //    }
-        //}
-
-        //public bool EditProblem(ProblemDecision problem)
-        //{
-        //    try
-        //    {
-        //        var old = GetDecision(problem.Id);
-        //        if (old == null)
-        //        return false;
-
-        //        old.Problem = problem.Problem;
-        //        old.Decision = problem.Decision;
-        //        old.DataAdditional = problem.DataAdditional;
-        //        old.PosVersion = problem.PosVersion;
-        //        old.IsDeleted = false;
-
-        //        _context.SaveChanges();
-        //        return true;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        //public bool DeleteProblem(int id)
-        //{
-        //    try
-        //    {
-        //        var problem = GetDecision(id);
-        //        if (problem == null)
-        //            return false;
-
-        //        problem.IsDeleted = true;
-        //        _context.SaveChanges();
-
-        //        return true;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        //public bool RestoreProblem(int id)
-        //{
-        //    try
-        //    {
-        //        var problem = GetDecision(id);
-        //        if (problem == null)
-        //            return false;
-
-        //        problem.IsDeleted = false;
-        //        _context.SaveChanges();
-
-        //        return true;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
+        public bool AddProblemDecision(ProblemDecision problem)
+        {
+            try
+            {
+                _context.ProblemDecisions.Add(problem);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
             
-        //}
+        }
+
+        public bool EditProblemDecision(ProblemDecision problem)
+        {
+
+            try
+            {
+                var old = GetProblemDecision(problem.Id);
+                if (old == null)
+                    return false;
+
+                old.IsDeleted = false;
+                old.DataAdditional = DateTime.Now;
+                old.Problem = problem.Problem;
+                old.Decision = problem.Decision;
+                old.PosVersion = problem.PosVersion;
+
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
+        }
+
+        public bool DeleteProblemDecision(int id)
+        {
+            try
+            {
+                var problem = GetProblemDecision(id);
+                if (problem == null)
+                    return false;
+                problem.IsDeleted = true;
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
+        }
+
+        public bool RestoreProblemDecision(int id)
+        {
+            try
+            {
+                var problem = GetProblemDecision(id);
+                if (problem == null)
+                    return false;
+                problem.IsDeleted = false;
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
         #endregion
     }

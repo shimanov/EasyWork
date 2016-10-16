@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebApplication2.Domain.Entities;
 
 namespace WebApplication2.DAL.Repositories.Base
@@ -29,23 +26,23 @@ namespace WebApplication2.DAL.Repositories.Base
 
         #endregion
 
-        #region ProblemDecision
+        #region
 
-        /*IEnumerable<ProblemDecision> GetDecisions();
+        IEnumerable<ProblemDecision> GetProblemDecisions();
 
-        IEnumerable<ProblemDecision> GetDecisions(Func<ProblemDecision, bool> func);
+        IEnumerable<ProblemDecision> GetProblemDecisions(Func<ProblemDecision, bool> func);
 
-        ProblemDecision GetDecision(int id);
+        ProblemDecision GetProblemDecision(int id);
 
-        ProblemDecision GetDecision(string problem);
+        ProblemDecision GetProblemDecision(string problem);
 
-        bool AddProblem(ProblemDecision problem);
+        bool AddProblemDecision(ProblemDecision phone);
 
-        bool EditProblem(ProblemDecision problem);
+        bool EditProblemDecision(ProblemDecision phone);
 
-        bool DeleteProblem(int id);
+        bool DeleteProblemDecision(int id);
 
-        bool RestoreProblem(int id);*/
+        bool RestoreProblemDecision(int id);
 
         #endregion
     }

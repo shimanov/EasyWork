@@ -43,8 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Base\IEasyWorkServices.cs" />
     <Compile Include="Services\Base\IPhoneBookService.cs" />
+    <Compile Include="Services\Base\IProblemDecisionServices.cs" />
     <Compile Include="Services\EasyWorkServices.cs" />
     <Compile Include="Services\PhoneBookService.cs" />
+    <Compile Include="Services\ProblemDecisionServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApplication2.DAL\WebApplication2.DAL.csproj">

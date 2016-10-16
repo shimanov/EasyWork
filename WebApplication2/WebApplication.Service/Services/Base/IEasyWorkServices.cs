@@ -7,6 +7,7 @@ namespace WebApplication.Service.Services.Base
     public interface IEasyWorkServices
     {
         #region PhoneBook
+
         IEnumerable<PhoneBook> GetPhoneBooks();
 
         IEnumerable<PhoneBook> GetPhoneBooks(Func<PhoneBook, bool> func);
@@ -22,25 +23,26 @@ namespace WebApplication.Service.Services.Base
         bool DeletePhone(int id);
 
         bool RestorePhone(int id);
+
         #endregion
 
-        #region ProblemDecision
+        #region
 
         IEnumerable<ProblemDecision> GetProblemDecisions();
 
-        IEnumerable<ProblemDecision> GetProblemDecisions(Func<ProblemDecision, bool> func);
+        IEnumerable<ProblemDecision> GetProblemDecisions(Func<PhoneBook, bool> func);
 
-        ProblemDecision GetDecision(int id);
+        ProblemDecision GetProblemDecision(int id);
 
-        ProblemDecision GetDecision(string problem);
+        ProblemDecision GetProblemDecision(string problem);
 
-        bool AddProblem(ProblemDecision problem);
+        bool AddProblemDecision(ProblemDecision phone);
 
-        bool EditProblem(ProblemDecision problem);
+        bool EditProblemDecision(ProblemDecision phone);
 
-        bool DeleteProblem(int id);
+        bool DeleteProblemDecision(int id);
 
-        bool RestoreProblem(int id);
+        bool RestoreProblemDecision(int id);
 
         #endregion
     }
