@@ -30,5 +30,7 @@ namespace WebApplication2.DAL.Context
 
         public DbSet<ProblemDecision> ProblemDecisions { get; set; }
 
+        public DbSet<Script> Scripts { get; set; }
+
     }
 }

@@ -42,6 +42,9 @@ namespace WebApplication2.IoC
 
             _kernel.Bind<IProblemDecisionRepository>().To<ProblemDecisionRepository>();
             _kernel.Bind<IProblemDecisionServices>().To<ProblemDecisionServices>();
+
+            _kernel.Bind<IScriptRepository>().To<ScriptRepository>();
+            _kernel.Bind<IScriptServices>().To<ScriptServices>();
         }
 
         

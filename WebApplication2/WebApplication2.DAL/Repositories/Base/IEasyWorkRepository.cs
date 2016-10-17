@@ -26,7 +26,7 @@ namespace WebApplication2.DAL.Repositories.Base
 
         #endregion
 
-        #region
+        #region ProblemDecision
 
         IEnumerable<ProblemDecision> GetProblemDecisions();
 
@@ -43,6 +43,26 @@ namespace WebApplication2.DAL.Repositories.Base
         bool DeleteProblemDecision(int id);
 
         bool RestoreProblemDecision(int id);
+
+        #endregion
+
+        #region
+
+        IEnumerable<Script> GetScripts();
+
+        IEnumerable<Script> GetScripts(Func<Script, bool> func);
+
+        Script GetScript(int id);
+
+        Script GetScript(string script);
+
+        bool AddScript(Script script);
+
+        bool EditScript(Script script);
+
+        bool DeleteScript(int id);
+
+        bool RestoreScript(int id);
 
         #endregion
     }

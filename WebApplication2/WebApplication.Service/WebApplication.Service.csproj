@@ -44,9 +44,11 @@
     <Compile Include="Services\Base\IEasyWorkServices.cs" />
     <Compile Include="Services\Base\IPhoneBookService.cs" />
     <Compile Include="Services\Base\IProblemDecisionServices.cs" />
+    <Compile Include="Services\Base\IScriptServices.cs" />
     <Compile Include="Services\EasyWorkServices.cs" />
     <Compile Include="Services\PhoneBookService.cs" />
     <Compile Include="Services\ProblemDecisionServices.cs" />
+    <Compile Include="Services\ScriptServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApplication2.DAL\WebApplication2.DAL.csproj">

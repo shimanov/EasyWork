@@ -119,6 +119,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProblemDecisionController.cs" />
+    <Compile Include="Controllers\ScriptController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,6 +144,7 @@
     <Content Include="Views\ProblemDecision\AddProblemDecision.cshtml" />
     <Content Include="Views\ProblemDecision\EditProblemDecision.cshtml" />
     <Content Include="Views\ProblemDecision\DeleteProblemDecision.cshtml" />
+    <Content Include="Views\Script\Scripts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

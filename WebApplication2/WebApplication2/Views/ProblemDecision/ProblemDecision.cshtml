@@ -23,14 +23,14 @@
                 <td>@i.PosVersion</td>
                 <td>
                     <span>
-                        @Html.ActionLink("Редактировать", "", new
+                        @Html.ActionLink("Редактировать", "EditProblemDecision", new
                         {
                             id = i.Id
                         })
                     </span>
                     <span>|</span>
                     <span>
-                        @Html.ActionLink("Удалить", "", new
+                        @Html.ActionLink("Удалить", "DeleteProblemDecision", new
                         {
                             id = i.Id
                         })
@@ -40,7 +40,7 @@
         }
     </table>
     <div>
-        @Html.ActionLink("Добавить", "")
+        @Html.ActionLink("Добавить", "AddProblemDecision")
     </div>
 </div>
 
