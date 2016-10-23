@@ -145,6 +145,9 @@
     <Content Include="Views\ProblemDecision\EditProblemDecision.cshtml" />
     <Content Include="Views\ProblemDecision\DeleteProblemDecision.cshtml" />
     <Content Include="Views\Script\Scripts.cshtml" />
+    <Content Include="Views\Script\AddScript.cshtml" />
+    <Content Include="Views\Script\EditScript.cshtml" />
+    <Content Include="Views\Script\DeleteScript.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -6,7 +6,6 @@ namespace WebApplication.Service.Services
 {
     public class ProblemDecisionServices : Base.IProblemDecisionServices
     {
-        //IProblemDecisionRepository _problemDecision = null;
         private IEasyWorkRepository _easyWorkRepository = null;
 
         public ProblemDecisionServices(IEasyWorkRepository easyWorkRepository)

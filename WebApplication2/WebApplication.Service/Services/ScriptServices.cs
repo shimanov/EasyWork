@@ -8,6 +8,11 @@ namespace WebApplication.Service.Services
     {
         IEasyWorkRepository _easyWorkRepository = null;
 
+        public ScriptServices(IEasyWorkRepository easyWorkRepository)
+        {
+            _easyWorkRepository = easyWorkRepository;
+        }
+
         public IEnumerable<Script> GetScripts() =>
             _easyWorkRepository.GetScripts();
 
