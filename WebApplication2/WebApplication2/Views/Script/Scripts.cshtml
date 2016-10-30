@@ -18,14 +18,14 @@
                 <td>@i.Description</td>
                 <td>@i.Scripts</td>
                 <td>
-                    <span>@Html.ActionLink("Редактировать", "",
+                    <span>@Html.ActionLink("Редактировать", "EditScript",
                               new
                               {
                                   id = i.Id
                               })
                     </span>
                     <span>|</span>
-                    <span>@Html.ActionLink("Удалить", "", new
+                    <span>@Html.ActionLink("Удалить", "DeleteScript", new
                           {
                               id = i.Id
                           })</span>

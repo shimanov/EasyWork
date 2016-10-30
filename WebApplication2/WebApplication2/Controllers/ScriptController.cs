@@ -60,7 +60,7 @@ namespace WebApplication2.Controllers
                 Description = script.Description,
                 IsDeleted = false
             });
-            return RedirectToAction("AddScript");
+            return RedirectToAction("Scripts");
         }
 
         [HttpGet]

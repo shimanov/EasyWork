@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Context\EasyWorkDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AuthenticationRepository.cs" />
+    <Compile Include="Repositories\Base\IAuthenticationRepository.cs" />
     <Compile Include="Repositories\Base\IEasyWorkRepository.cs" />
     <Compile Include="Repositories\Base\IProblemDecisionRepository.cs" />
     <Compile Include="Repositories\Base\IScriptRepository.cs" />

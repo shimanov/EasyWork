@@ -27,5 +27,9 @@ namespace WebApplication2.DAL.Context
 
         public DbSet<Script> Scripts { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Group> Groups { get; set; }
+
     }
 }

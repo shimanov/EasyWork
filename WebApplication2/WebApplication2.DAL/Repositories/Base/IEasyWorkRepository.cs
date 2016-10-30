@@ -46,7 +46,7 @@ namespace WebApplication2.DAL.Repositories.Base
 
         #endregion
 
-        #region
+        #region Script
 
         IEnumerable<Script> GetScripts();
 
@@ -63,6 +63,38 @@ namespace WebApplication2.DAL.Repositories.Base
         bool DeleteScript(int id);
 
         bool RestoreScript(int id);
+
+        #endregion
+
+        #region User
+
+        IEnumerable<User> GetUsers();
+
+        IEnumerable<User> GetUsers(Func<User, bool> func);
+
+        User GetUser(int id);
+
+        User GetUser(string name);
+
+        bool AddUser(User user);
+
+        bool EditUser(User user);
+
+        bool DeleteUser(int id);
+
+        bool RestoreUser(int id);
+
+        #endregion
+
+        #region Group
+
+        IEnumerable<Group> GetGroups();
+
+        IEnumerable<Group> GetGroups(Func<Group, bool> func);
+
+        Group GetGroup(int id);
+
+        Group GetGroup(string name);
 
         #endregion
     }

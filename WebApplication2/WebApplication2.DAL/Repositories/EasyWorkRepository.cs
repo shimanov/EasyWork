@@ -17,6 +17,7 @@ namespace WebApplication2.DAL.Repositories
 
 
         #region PhoneBook
+
         public IEnumerable<PhoneBook> GetPhoneBooks()
         {
             return _context.PhoneBooks.ToArray();
@@ -218,7 +219,7 @@ namespace WebApplication2.DAL.Repositories
 
         #endregion
 
-        #region
+        #region Script
 
         public IEnumerable<Script> GetScripts()
         {
@@ -313,6 +314,135 @@ namespace WebApplication2.DAL.Repositories
                 return false;
             }
         }
+
+        #endregion
+
+        #region User
+
+        public IEnumerable<User> GetUsers()
+        {
+            return _context.Users.ToArray();
+        }
+
+        public IEnumerable<User> GetUsers(Func<User, bool> func)
+        {
+            return _context.Users.Where(func).ToArray();
+        }
+
+        public User GetUser(int id)
+        {
+            return _context.Users.FirstOrDefault(x => x.Id == id);
+        }
+
+        public User GetUser(string name)
+        {
+            return _context.Users
+                .FirstOrDefault(x =>
+                    x.Name.Trim().ToLower() == name.ToLower().Trim());
+        }
+
+        public bool AddUser(User user)
+        {
+            try
+            {
+                _context.Users.Add(user);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+           
+        }
+
+        public bool EditUser(User user)
+        {
+            try
+            {
+                var old = GetUser(user.Id);
+                if (old == null)
+                    return false;
+
+                old.IsDeleted = false;
+                old.Name = user.Name;
+                old.Password = user.Password;
+                old.Group = user.Group;
+                old.GroupId = user.GroupId;
+
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
+        }
+
+        public bool DeleteUser(int id)
+        {
+
+            try
+            {
+                var user = GetUser(id);
+                if (user == null)
+                    return false;
+
+                user.IsDeleted = true;
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
+        }
+
+        public bool ResoreUser(int id)
+        {
+            try
+            {
+                var user = GetUser(id);
+                if (user == null)
+                    return false;
+
+                user.IsDeleted = false;
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        #endregion
+
+        #region Group
+
+        public IEnumerable<Group> GetGroups()
+        {
+            return _context.Groups.ToArray();
+        }
+
+        public IEnumerable<Group> GetGroups(Func<Group, bool> func)
+        {
+            return _context.Groups.Where(func).ToArray();
+        }
+
+        public Group GetGroup(int id)
+        {
+            return _context.Groups.FirstOrDefault(x => x.Id == id);
+        }
+
+        public Group GetGroup(string name)
+        {
+            return _context.Groups.FirstOrDefault(x =>
+                x.Name.ToLower().Trim() == name.ToLower().Trim());
+        }
+
 
         #endregion
     }
