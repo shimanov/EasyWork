@@ -125,6 +125,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Models\User.cs" />
+    <Compile Include="Controllers\AuthencationController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProblemDecisionController.cs" />
@@ -133,6 +134,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IoC\NinjectControllerFactory.cs" />
+    <Compile Include="Models\Authentication\AuthenticationParams.cs" />
+    <Compile Include="Models\Authentication\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +160,10 @@
     <Content Include="Views\Script\AddScript.cshtml" />
     <Content Include="Views\Script\EditScript.cshtml" />
     <Content Include="Views\Script\DeleteScript.cshtml" />
+    <Content Include="Views\Authencation\Index.cshtml" />
+    <Content Include="Views\Authencation\LogIn.cshtml" />
+    <Content Include="Views\Authencation\Register.cshtml" />
+    <Content Include="Views\Shared\_AuthenticationLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,7 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApplication.Service\WebApplication.Service.csproj">

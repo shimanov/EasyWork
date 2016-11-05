@@ -400,7 +400,7 @@ namespace WebApplication2.DAL.Repositories
             
         }
 
-        public bool ResoreUser(int id)
+        public bool RestoreUser(int id)
         {
             try
             {

@@ -1,3 +1,4 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Web.csprojResolveAssemblyReference.cache
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\roslyn\csc.exe
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\roslyn\csc.exe.config
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\roslyn\csc.rsp
@@ -33,6 +34,7 @@ C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplic
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\Ninject.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Http.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.dll
@@ -41,6 +43,8 @@ C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplic
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\WebApplication.Service.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\WebApplication2.DAL.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\WebApplication2.Domain.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Net.Http.Formatting.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\Newtonsoft.Json.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\WebApplication.Service.pdb
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\WebApplication2.DAL.pdb
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\WebApplication2.Domain.pdb
@@ -48,18 +52,19 @@ C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplic
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\EntityFramework.SqlServer.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\Ninject.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Http.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Webpages.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\System.Net.Http.Formatting.xml
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Razor.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Webpages.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Webpages.Deployment.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Webpages.Razor.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Helpers.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Mvc.resources.dll
-C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Web.csprojResolveAssemblyReference.cache
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
