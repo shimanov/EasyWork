@@ -17,6 +17,10 @@ namespace WebApplication2.DAL.Repositories
             _context = EasyWorkDBContext.Instance;
         }
 
+        public User GetUser(string userName)
+        {
+            return _context.Users.FirstOrDefault(x => x.Name == userName);
+        }
 
         public bool RegisterUser(User user)
         {
@@ -28,7 +32,7 @@ namespace WebApplication2.DAL.Repositories
                 _context.SaveChanges();
                 isSaved = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isSaved = false;
             }
@@ -38,7 +42,7 @@ namespace WebApplication2.DAL.Repositories
 
         public bool RegisterUser(string userName, string userPassword, int groupId)
         {
-            bool isSaver = false;
+            bool isSaved = false;
 
             try
             {
@@ -49,14 +53,14 @@ namespace WebApplication2.DAL.Repositories
                     GroupId = groupId,
                     IsDeleted = false
                 });
-                isSaver = true;
+                _context.SaveChanges();
+                isSaved = true;
             }
             catch (Exception)
             {
-                isSaver = false;
+                isSaved = false;
             }
-
-            return isSaver;
+            return true;
         }
 
         public bool RemoveUser(User userToRemove)
@@ -65,8 +69,7 @@ namespace WebApplication2.DAL.Repositories
 
             try
             {
-                var user = _context.Users.FirstOrDefault(
-                    x => x.Id == userToRemove.Id);
+                var user = _context.Users.FirstOrDefault(x => x.Id == userToRemove.Id);
 
                 if (user == null)
                     return false;
@@ -90,13 +93,12 @@ namespace WebApplication2.DAL.Repositories
 
             try
             {
-                var user = _context.Users.FirstOrDefault(
-                    x => x.Id == id);
+                var user = _context.Users.FirstOrDefault(x => x.Id == id);
 
                 if (user == null)
                     return false;
 
-                user.IsDeleted = true;
+                user.IsDeleted = false;
 
                 _context.SaveChanges();
                 isRemoved = true;

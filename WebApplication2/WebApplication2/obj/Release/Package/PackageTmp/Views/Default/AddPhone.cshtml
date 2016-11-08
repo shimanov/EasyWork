@@ -1,0 +1,27 @@
+﻿@model WebApplication2.Domain.Entities.PhoneBook
+@{
+    ViewBag.Title = "AddPhone";
+}
+
+<h2>AddPhone</h2>
+
+@using (Html.BeginForm("AddPhone", "Default", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Почтамт</td>
+            <td>@Html.TextBoxFor(x => x.Pochtamt)</td>
+        </tr>
+        <tr>
+            <td>Имя Фамилия</td>
+            <td>@Html.TextBoxFor(x => x.Fio)</td>
+        </tr>
+        <tr>
+            <td>Номер телефона</td>
+            <td>@Html.TextBoxFor(x => x.PhoneNumber)</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Добавить"/>
+}
+

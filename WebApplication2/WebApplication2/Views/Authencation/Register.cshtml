@@ -2,21 +2,21 @@
 
 @{
     Layout = "~/Views/Shared/_AuthenticationLayout.cshtml";
+    ViewBag.Title = "Register";
 }
 
-@section header{
+@section header
+{
     <span>|</span>
     @Html.ActionLink("Логин", "LogIn", "Authencation")
 }
 
 @using (Html.BeginForm("Register", "Authencation", FormMethod.Post))
 {
-    <div class="">
-        <table class="">
+    <div>
+        <table>
             <tr>
-                <td>
-                    Логин:
-                </td>
+                <td>Логин</td>
                 <td>
                     @Html.TextBoxFor(x => x.User, new
                {
@@ -27,12 +27,10 @@
             </tr>
         </table>
     </div>
-    <div class="">
-        <table class="">
+    <div>
+        <table>
             <tr>
-                <td>
-                    Пароль:
-                </td>
+                <td>Пароль</td>
                 <td>
                     @Html.PasswordFor(x => x.Password, new
                {
@@ -44,19 +42,9 @@
         </table>
     </div>
 
-    if (Model.IsAuthFailed)
-    {
-        <div>
-            Ошибка авторизации. Неверный логин или пароль.
-        </div>
-    }
-
-    <div class="error-messages text-center">
+    <div>
         @Html.ValidationSummary(false)
     </div>
 
-    <input type="submit" value="Register" style="width: 100px; margin: 0 0 0 45%;" />
-
+    <input type="submit" value="Register" />
 }
-
-

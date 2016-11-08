@@ -8,10 +8,9 @@ namespace WebApplication.Service.Services
     public class AuthenticationService :Base.IAuthenticationService
     {
         IAuthenticationRepository _authenticationRepository = null;
-        IEasyWorkRepository _easyWorkRepository = null;
+        private IEasyWorkRepository _easyWorkRepository = null;
 
-        public AuthenticationService(IAuthenticationRepository authenticationRepository,
-            IEasyWorkRepository easyWorkRepository)
+        public AuthenticationService(IAuthenticationRepository authenticationRepository, IEasyWorkRepository easyWorkRepository)
         {
             _authenticationRepository = authenticationRepository;
             _easyWorkRepository = easyWorkRepository;
@@ -35,7 +34,7 @@ namespace WebApplication.Service.Services
             var passwordBase64 = Convert.ToBase64String(bytes, 0, bytes.Length);
             var user = _easyWorkRepository.GetUser(userName);
 
-            if (user == null)
+            if (user!=null)
                 return false;
 
             return _authenticationRepository.RegisterUser(new User
@@ -46,5 +45,6 @@ namespace WebApplication.Service.Services
                 Password = passwordBase64
             });
         }
+
     }
 }

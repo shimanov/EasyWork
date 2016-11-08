@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplication2.Domain.Entities.Script>
+@{
+    ViewBag.Title = "Scripts";
+}
+
+<h2>Scripts</h2>
+
+<div>
+    <table>
+        <tr>
+            <td>Описание</td>
+            <td>Скрипт</td>
+            <td>&nbsp;</td>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Description</td>
+                <td>@i.Scripts</td>
+                <td>
+                    <span>@Html.ActionLink("Редактировать", "EditScript",
+                              new
+                              {
+                                  id = i.Id
+                              })
+                    </span>
+                    <span>|</span>
+                    <span>@Html.ActionLink("Удалить", "DeleteScript", new
+                          {
+                              id = i.Id
+                          })</span>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div>
+        @Html.ActionLink("Добавить", "");
+    </div>
+</div>
+

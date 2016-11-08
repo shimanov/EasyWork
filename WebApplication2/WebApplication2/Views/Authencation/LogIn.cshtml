@@ -1,22 +1,22 @@
 ﻿@model WebApplication2.Models.Authentication.AuthenticationParams
-
+    
 @{
     Layout = "~/Views/Shared/_AuthenticationLayout.cshtml";
+    ViewBag.Title = "LogIn";
 }
 
-@section header{
+@section header
+{
     <span>|</span>
-    @Html.ActionLink("Регистрация", "Register", "Authencation")
+    @Html.ActionLink("регистрация", "Register", "Authencation")
 }
 
 @using (Html.BeginForm("LogIn", "Authencation", FormMethod.Post))
 {
-    <div class="">
-        <table class="">
+    <div>
+        <table>
             <tr>
-                <td>
-                    Логин:
-                </td>
+                <td>Логин</td>
                 <td>
                     @Html.TextBoxFor(x => x.User, new
                     {
@@ -27,14 +27,12 @@
             </tr>
         </table>
     </div>
-    <div class="">
-        <table class="">
+    <div>
+        <table>
             <tr>
+                <td>Пароль</td>
                 <td>
-                    Пароль:
-                </td>
-                <td>
-                    @Html.TextBoxFor(x => x.Password, new
+                    @Html.PasswordFor(x => x.Password, new
                     {
                         id = "password",
                         name = "password"
@@ -47,15 +45,13 @@
     if (Model.IsAuthFailed)
     {
         <div>
-            Ошибка авторизации. Неверный логин или пароль.
+            Ошибка авторизациию Неверный логин и пароль.
         </div>
     }
 
-    <div class="error-messages text-center">
+    <div>
         @Html.ValidationSummary(false)
     </div>
 
-    <input type="submit" value="Login" style="width: 100px; margin: 0 0 0 45%;" />
-
+    <input type="submit" value="login"/>
 }
-

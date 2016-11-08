@@ -45,6 +45,11 @@ namespace WebApplication2.IoC
 
             _kernel.Bind<IScriptRepository>().To<ScriptRepository>();
             _kernel.Bind<IScriptServices>().To<ScriptServices>();
+
+            _kernel.Bind<IAuthenticationRepository>().To<AuthenticationRepository>();
+            _kernel.Bind<IAuthenticationService>().To<AuthenticationService>();
+
+            _kernel.Bind<IAdminService>().To<AdminService>();
         }
 
         

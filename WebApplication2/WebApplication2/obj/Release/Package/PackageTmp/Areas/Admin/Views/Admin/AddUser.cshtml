@@ -1,0 +1,41 @@
+﻿@model WebApplication2.Areas.Admin.Models.User
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+@using (Html.BeginForm("AddUser", "Admin", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Имя:</td>
+            <td>@Html.TextBoxFor(x => x.Name)</td>
+        </tr>
+        <tr>
+            <td>Пароль:</td>
+            <td>@Html.TextBoxFor(x => x.Password)</td>
+        </tr>
+        <tr>
+            <td>Группа:</td>
+            <td>
+                @Html.DropDownListFor(x => x.GroupId, new List<SelectListItem>{
+                    new SelectListItem
+                    {
+                        Text = "Admin",
+                        Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "User",
+                        Value = "2"
+                    }
+                })
+            </td>
+        </tr>
+
+    </table>
+
+    <input type="submit" value="Add user"/>
+}
+

@@ -1,0 +1,23 @@
+﻿@model WebApplication2.Domain.Entities.Script
+@{
+    ViewBag.Title = "AddScript";
+}
+
+<h2>AddScript</h2>
+
+@using (Html.BeginForm("AddScript", "Script", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Описание</td>
+            <td>@Html.TextBoxFor(x => x.Description)</td>
+        </tr>
+        <tr>
+            <td>Скрипт</td>
+            <td>@Html.TextBoxFor(x => x.Scripts)</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Добавить"/>
+}
+

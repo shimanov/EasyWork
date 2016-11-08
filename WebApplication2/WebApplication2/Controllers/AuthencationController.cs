@@ -11,7 +11,7 @@ namespace WebApplication2.Controllers
 {
     public class AuthencationController : Controller
     {
-        private IAuthenticationService _authenticationService = null;
+        IAuthenticationService _authenticationService = null;
 
         public AuthencationController(IAuthenticationService authenticationService)
         {
@@ -30,7 +30,7 @@ namespace WebApplication2.Controllers
         public ActionResult Logoff()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("", "");
+            return RedirectToAction("Index", "Authencation");
         }
 
         [HttpGet]
@@ -41,7 +41,8 @@ namespace WebApplication2.Controllers
         }
 
         [HttpPost]
-        public ActionResult LogIn([System.Web.Http.FromBody] WebApplication2.Models.Authentication.AuthenticationParams auth)
+        public ActionResult LogIn(
+            [System.Web.Http.FromBody] WebApplication2.Models.Authentication.AuthenticationParams auth)
         {
             if (!ModelState.IsValid)
                 return View(auth);
@@ -53,7 +54,6 @@ namespace WebApplication2.Controllers
                     Password = "",
                     User = ""
                 });
-
             FormsAuthentication.SetAuthCookie(auth.User, true);
 
             return RedirectToAction("", "");
@@ -67,17 +67,18 @@ namespace WebApplication2.Controllers
         }
 
         [HttpPost]
+        [ActionName("Register")]
         public ActionResult Register(
             [System.Web.Http.FromBody] WebApplication2.Models.Authentication.AuthenticationParams auth)
         {
             if (!ModelState.IsValid)
                 return View(auth);
 
-            if(!_authenticationService.RegisterUser(auth.User, auth.Password))
-                throw new Exception($"Ошибка при решистрации пользователя {auth.User}.");
+            if (_authenticationService.RegisterUser(auth.User, auth.Password)) 
+                throw new Exception($"Ошибка при регистрации пользователя {auth.User}.");
 
             FormsAuthentication.SetAuthCookie(auth.User, true);
-            return RedirectToAction("", "");
+            return RedirectToAction("LogIn", "Authencation");
         }
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\WebApplication.Service.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\WebApplication.Service.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\WebApplication2.DAL.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\WebApplication2.Domain.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\EntityFramework.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\WebApplication2.DAL.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\WebApplication2.Domain.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\bin\Release\EntityFramework.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\obj\Release\WebApplication.Service.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\obj\Release\WebApplication.Service.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication.Service\obj\Release\WebApplication.Service.pdb

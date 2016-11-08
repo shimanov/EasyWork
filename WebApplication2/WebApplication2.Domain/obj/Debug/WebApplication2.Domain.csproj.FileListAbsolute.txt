@@ -1,5 +1,4 @@
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2.Domain\bin\Debug\WebApplication2.Domain.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2.Domain\bin\Debug\WebApplication2.Domain.pdb
-C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2.Domain\obj\Debug\WebApplication2.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2.Domain\obj\Debug\WebApplication2.Domain.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2.Domain\obj\Debug\WebApplication2.Domain.pdb

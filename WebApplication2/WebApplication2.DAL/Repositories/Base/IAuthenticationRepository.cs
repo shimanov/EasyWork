@@ -4,6 +4,8 @@ namespace WebApplication2.DAL.Repositories.Base
 {
     public interface IAuthenticationRepository
     {
+        User GetUser(string userName);
+
         bool RegisterUser(User user);
 
         bool RegisterUser(string userName, string userPassword, int groupId);

@@ -1,0 +1,31 @@
+﻿@model WebApplication2.Domain.Entities.ProblemDecision
+@{
+    ViewBag.Title = "AddProblemDecision";
+}
+
+<h2>AddProblemDecision</h2>
+
+@using (Html.BeginForm("AddProblemDecision", "ProblemDecision", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Проблема</td>
+            <td>@Html.TextBoxFor(x => x.Problem)</td>
+        </tr>
+        <tr>
+            <td>Решение проблемы</td>
+            <td>@Html.TextBoxFor(x => x.Decision)</td>
+        </tr>
+        <tr>
+            <td>Версия ЕАС ОПС</td>
+            <td>@Html.TextBoxFor(x => x.PosVersion)</td>
+        </tr>
+        <tr>
+            <td>Дата добавления</td>
+            <td>@Html.TextBoxFor(x => x.DataAdditional)</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Добавить"/>
+}
+
