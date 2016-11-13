@@ -32,7 +32,7 @@ namespace WebApplication2.Areas.Admin.Controllers
             {
                 Id = x.Id,
                 GroupId = x.GroupId.ToString(),
-                Name = x.Name,
+                Name = x.Email,
                 Password = x.Password,
                 IsDeleted = x.IsDeleted,
                 GroupName = x.Group.Name
@@ -70,7 +70,7 @@ namespace WebApplication2.Areas.Admin.Controllers
             {
                 Id = user.Id,
                 GroupId = user.GroupId.ToString(),
-                Name = user.Name,
+                Name = user.Email,
                 Password = "",
                 IsDeleted = user.IsDeleted,
                 GroupName = user.Group.Name
@@ -84,7 +84,7 @@ namespace WebApplication2.Areas.Admin.Controllers
             {
                 GroupId = int.Parse(user.GroupId),
                 IsDeleted = false,
-                Name = user.Name,
+                Email = user.Name,
                 Password = user.Password
             });
             return RedirectToAction("Users");

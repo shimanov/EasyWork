@@ -10,8 +10,11 @@ namespace WebApplication2.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        [Required]
+        public string Email { get; set; }
 
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         public bool IsDeleted { get; set; }

@@ -1,0 +1,36 @@
+﻿@model WebApplication2.Domain.Entities.User
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h4>Register user</h4>
+        <hr/>
+        @Html.ValidationSummary(false)
+        
+        <div>
+            email
+            <div>
+                @Html.EditorFor(x => x.Email)
+            </div>
+        </div>
+        <div>
+            password
+            <div>
+                @Html.EditorFor(x => x.Password)
+            </div>
+        </div>
+        <div>
+            <div>
+                <input type="submit" value="Register"/>
+            </div>
+        </div>
+    </div>
+}
+

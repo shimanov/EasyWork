@@ -78,7 +78,7 @@ namespace WebApplication2.Controllers
                 throw new Exception($"Ошибка при регистрации пользователя {auth.User}.");
 
             FormsAuthentication.SetAuthCookie(auth.User, true);
-            return RedirectToAction("LogIn", "Authencation");
+            return RedirectToAction("Phones", "Default");
         }
     }
 }

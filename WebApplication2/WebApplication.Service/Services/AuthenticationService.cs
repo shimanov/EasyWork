@@ -8,7 +8,7 @@ namespace WebApplication.Service.Services
     public class AuthenticationService :Base.IAuthenticationService
     {
         IAuthenticationRepository _authenticationRepository = null;
-        private IEasyWorkRepository _easyWorkRepository = null;
+        IEasyWorkRepository _easyWorkRepository = null;
 
         public AuthenticationService(IAuthenticationRepository authenticationRepository, IEasyWorkRepository easyWorkRepository)
         {
@@ -34,14 +34,14 @@ namespace WebApplication.Service.Services
             var passwordBase64 = Convert.ToBase64String(bytes, 0, bytes.Length);
             var user = _easyWorkRepository.GetUser(userName);
 
-            if (user!=null)
+            if (user != null)
                 return false;
 
-            return _authenticationRepository.RegisterUser(new User
+            return _authenticationRepository.RegisterUser(new WebApplication2.Domain.Entities.User
             {
                 GroupId = 2,
                 IsDeleted = false,
-                Name = userName,
+                Email = userName,
                 Password = passwordBase64
             });
         }

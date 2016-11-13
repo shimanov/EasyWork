@@ -338,7 +338,7 @@ namespace WebApplication2.DAL.Repositories
         {
             return _context.Users
                 .FirstOrDefault(x =>
-                    x.Name.Trim().ToLower() == name.ToLower().Trim());
+                    x.Email.Trim().ToLower() == name.ToLower().Trim());
         }
 
         public bool AddUser(User user)
@@ -365,7 +365,7 @@ namespace WebApplication2.DAL.Repositories
                     return false;
 
                 old.IsDeleted = false;
-                old.Name = user.Name;
+                old.Email = user.Email;
                 old.Password = user.Password;
                 old.Group = user.Group;
                 old.GroupId = user.GroupId;

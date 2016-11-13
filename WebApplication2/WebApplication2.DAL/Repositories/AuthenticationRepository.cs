@@ -19,7 +19,7 @@ namespace WebApplication2.DAL.Repositories
 
         public User GetUser(string userName)
         {
-            return _context.Users.FirstOrDefault(x => x.Name == userName);
+            return _context.Users.FirstOrDefault(x => x.Email == userName);
         }
 
         public bool RegisterUser(User user)
@@ -32,8 +32,9 @@ namespace WebApplication2.DAL.Repositories
                 _context.SaveChanges();
                 isSaved = true;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
+               
                 isSaved = false;
             }
 
@@ -48,7 +49,7 @@ namespace WebApplication2.DAL.Repositories
             {
                 _context.Users.Add(new User
                 {
-                    Name = userName,
+                    Email = userName,
                     Password = userPassword,
                     GroupId = groupId,
                     IsDeleted = false
@@ -60,7 +61,7 @@ namespace WebApplication2.DAL.Repositories
             {
                 isSaved = false;
             }
-            return true;
+            return isSaved;
         }
 
         public bool RemoveUser(User userToRemove)

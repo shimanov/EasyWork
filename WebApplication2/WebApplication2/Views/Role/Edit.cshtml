@@ -1,0 +1,17 @@
+﻿@model WebApplication2.Models.Identity.EditRoleModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>AddRole</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.ValidationSummary("", true)
+        <p>Name: @Html.EditorFor(x => x.Name)</p>
+        <p>Description: @Html.EditorFor(x => x.Description)</p>
+        <p><input type="submit" value="Edit role" /></p>
+    </div>
+}
