@@ -178,6 +178,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authentication\AuthenticationParams.cs" />
     <Compile Include="Models\Authentication\User.cs" />
+    <Compile Include="Models\Identity\ApplicationDBInitializer.cs" />
     <Compile Include="Models\Identity\ApplicationRole.cs" />
     <Compile Include="Models\Identity\ApplicationRoleManager.cs" />
     <Compile Include="Models\Identity\ApplicationUser.cs" />
@@ -240,6 +242,7 @@
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
     <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

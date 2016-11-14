@@ -1,6 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System.Data.Entity;
+using System.Web.Mvc;
 using System.Web.Routing;
 using WebApplication2.IoC;
+using WebApplication2.Models.Identity;
 
 namespace WebApplication2
 {
@@ -13,7 +15,7 @@ namespace WebApplication2
 
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
 
-            //Database.SetInitializer();
+            Database.SetInitializer(new ApplicationDBInitializer());
         }
     }
 }

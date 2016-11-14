@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 using WebApplication2.DAL.Repositories.Base;
-using WebApplication2.Domain.Entities;
 
 namespace WebApplication.Service.Services
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -29,6 +25,8 @@ namespace WebApplication2.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(WebApplication2.Domain.Entities.User model)
         {
             if (ModelState.IsValid)
@@ -41,6 +39,24 @@ namespace WebApplication2.Controllers
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    //Generate token
+                    //var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    //Create link for confirm
+                    //var callBack = Url.Action("", "Account", new
+                    //{
+                    //    userId = user.Id,
+                    //    code = code
+                    //}, protocol:Request.Url.Scheme);
+
+                    await UserManager.AddToRoleAsync(user.Id, "User");
+
+                    //Send email
+                    //await
+                    //    UserManager.SendEmailAsync(user.Id, "Подтверждение регистрации",
+                    //        "для завершения регистрации перейдите по ссылке :: <a href=" + callBack +
+                    //        "\">Завершить регистрацию</a>");
+                    //return View("DisplayEmail");
+                    
                     return RedirectToAction("", "Account");
                 }
                 else
