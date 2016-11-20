@@ -5,8 +5,10 @@
 
 <h2>AddPhone</h2>
 
-@using (Html.BeginForm("AddPhone", "Default", FormMethod.Post))
+@if (User.IsInRole("admin"))
 {
+   using (Html.BeginForm("AddPhone", "Default", FormMethod.Post))
+   {
     <table>
         <tr>
             <td>Почтамт</td>
@@ -22,6 +24,12 @@
         </tr>
     </table>
 
-    <input type="submit" value="Добавить"/>
+    <input type="submit" value="Добавить" />
+   }
 }
+else
+{
+  Response.Redirect("~/Default/Phones");
+}
+
 

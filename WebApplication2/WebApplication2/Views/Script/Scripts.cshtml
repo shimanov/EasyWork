@@ -17,25 +17,37 @@
             <tr>
                 <td>@i.Description</td>
                 <td>@i.Scripts</td>
-                <td>
-                    <span>@Html.ActionLink("Редактировать", "EditScript",
+                
+                @if (User.IsInRole("admin"))
+                {
+                    <td>
+                        <span>
+                            @Html.ActionLink("Редактировать", "EditScript",
                               new
                               {
                                   id = i.Id
                               })
                     </span>
                     <span>|</span>
-                    <span>@Html.ActionLink("Удалить", "DeleteScript", new
-                          {
-                              id = i.Id
-                          })</span>
-                </td>
+                    <span>
+                        @Html.ActionLink("Удалить", "DeleteScript", new
+                     {
+                         id = i.Id
+                     })
+                    </span>
+                    </td>
+                }
+                
             </tr>
         }
     </table>
-
-    <div>
-        @Html.ActionLink("Добавить", "");
-    </div>
+    
+    @if (User.IsInRole("admin"))
+    {
+        <div>
+            @Html.ActionLink("Добавить", "");
+        </div>
+    }
+    
 </div>
 

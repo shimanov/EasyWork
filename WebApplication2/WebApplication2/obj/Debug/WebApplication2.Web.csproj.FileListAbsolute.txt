@@ -84,7 +84,7 @@ C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplic
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Helpers.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\bin\ru\System.Web.Mvc.resources.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Web.csprojResolveAssemblyReference.cache
-C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
-C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Migrations.DataMigration.resources
 C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Web.csproj.GenerateResource.Cache
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\EasyWork\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb

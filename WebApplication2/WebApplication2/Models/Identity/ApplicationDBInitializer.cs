@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace WebApplication2.Models.Identity
 {
-    public class ApplicationDBInitializer : DropCreateDatabaseAlways<ApplicationContext>
+    public class ApplicationDBInitializer : CreateDatabaseIfNotExists<ApplicationContext>
     {
         protected override void Seed(ApplicationContext context)
         {

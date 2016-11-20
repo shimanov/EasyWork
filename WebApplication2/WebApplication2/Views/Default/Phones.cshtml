@@ -19,26 +19,40 @@
                 <td>@item.Pochtamt</td>
                 <td>@item.Fio</td>
                 <td>@item.PhoneNumber</td>
-                <td>
-                    <span>@Html.ActionLink("Редактировать", "EditPhone", new
-                          {
-                              id = item.Id
-                          })
+                @if (User.IsInRole("admin"))
+                {
+                    <td>
+                        <span>
+                            @Html.ActionLink("Редактировать", "EditPhone", new
+                            {
+                                id = item.Id
+                            })
                     </span>
-                    <span>|</span>
-                    <span>@Html.ActionLink("Удалить", "DeletePhone", new
-                          {
-                              id = item.Id
-                          })
-                    </span>
-                </td>
+                        <span>|</span>
+                        <span>
+                        @Html.ActionLink("Удалить", "DeletePhone", new
+                        {
+                            id = item.Id
+                        })
+                        </span>
+                    </td>
+                }
+                else
+                {
+
+                }
+                
             </tr>
         }
     </table>
-
-    <div>
-        @Html.ActionLink("Добавить", "AddPhone")
-    </div>
+    
+    @if (User.IsInRole("admin"))
+    {
+        <div>
+            @Html.ActionLink("Добавить", "AddPhone")
+        </div>
+    }
+    
 </div>
 
 

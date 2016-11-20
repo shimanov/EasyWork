@@ -5,14 +5,22 @@
 
 <h2>AddRole</h2>
 
-@using (Html.BeginForm())
+@if (User.IsInRole("admin"))
 {
+  using (Html.BeginForm())
+  {
     @Html.AntiForgeryToken()
     <div>
         @Html.ValidationSummary("", true)
         <p>Name: @Html.EditorFor(x => x.Name)</p>
         <p>Description: @Html.EditorFor(x => x.Description)</p>
-        <p><input type="submit" value="Add role"/></p>
+        <p><input type="submit" value="Add role" /></p>
     </div>
+  }
 }
+else
+{
+  Response.Redirect("~/AccessDenided");
+}
+
 

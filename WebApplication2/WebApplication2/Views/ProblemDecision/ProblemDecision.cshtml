@@ -21,26 +21,36 @@
                 <td>@i.Decision</td>
                 <td>@i.DataAdditional</td>
                 <td>@i.PosVersion</td>
-                <td>
-                    <span>
-                        @Html.ActionLink("Редактировать", "EditProblemDecision", new
-                        {
-                            id = i.Id
-                        })
-                    </span>
-                    <span>|</span>
-                    <span>
-                        @Html.ActionLink("Удалить", "DeleteProblemDecision", new
-                        {
-                            id = i.Id
-                        })
-                    </span>
-                </td>
+
+                @if (User.IsInRole("admin"))
+                {
+                    <td>
+                        <span>
+                            @Html.ActionLink("Редактировать", "EditProblemDecision", new
+                            {
+                                id = i.Id
+                            })
+                        </span>
+                        <span>|</span>
+                        <span>
+                            @Html.ActionLink("Удалить", "DeleteProblemDecision", new
+                            {
+                                id = i.Id
+                            })
+                        </span>
+                    </td>
+                }
+                
             </tr>
         }
     </table>
-    <div>
-        @Html.ActionLink("Добавить", "AddProblemDecision")
-    </div>
+    
+    @if (User.IsInRole("admin"))
+    {
+        <div>
+            @Html.ActionLink("Добавить", "AddProblemDecision")
+        </div>
+    }
+    
 </div>
 
