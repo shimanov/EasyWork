@@ -1,0 +1,21 @@
+﻿@model WebApplication2.Domain.Entities.Script
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal" aria-hidden="True">X</button>
+        <h3>Скрипт</h3>
+    </div>
+    <div class="modal-body">
+        <dl class="dl-horizontal">
+            <dt>Описание</dt>
+            <dd>@Html.DisplayFor(x => x.Description)</dd>
+            
+            <dt>Скрипт</dt>
+            <dd>@Html.DisplayFor(x => x.Scripts)</dd>
+        </dl>
+    </div>
+</div>
+

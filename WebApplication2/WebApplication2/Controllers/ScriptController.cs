@@ -87,5 +87,18 @@ namespace WebApplication2.Controllers
             });
             return RedirectToAction("Scripts");
         }
+
+        [HttpGet]
+        public ActionResult DetailsScript(int id)
+        {
+            var script = _scriptServices.GetScripts()
+                .FirstOrDefault(x => x.Id == id);
+            if (script != null)
+            {
+                return PartialView(script);
+            }
+            return HttpNotFound();
+
+        }
     }
 }

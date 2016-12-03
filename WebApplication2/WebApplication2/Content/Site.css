@@ -3,6 +3,10 @@
     background: none;
 }
 
+.link-color {
+    color: #ffffff;
+}
+
 .full {
     background: url(C:/Users/user4/Documents/html/css/img_back_login.jpg ) no-repeat center center fixed;
     -webkit-background-size: cover;

@@ -6,35 +6,39 @@
     <title>@ViewBag.Title - EasyWork</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("EasyWork", "Phones", "Default", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Скрипты", "Scripts", "Script")</li>
-                    <li>@Html.ActionLink("Проблемы и решения", "ProblemDecision", "ProblemDecision")</li>
-                    <li>@Html.ActionLink("Телефоный справочник", "Phones", "Default")</li>
-                </ul>
-            </div>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Easy Work</a>
+                </li>
+                <li>
+                    @Html.ActionLink("Решения и проблемы", "ProblemDecision", "ProblemDecision")
+                </li>
+                <li>
+                    @Html.ActionLink("Телефонный справочник", "Phones", "Default")
+                </li>
+                <li>
+                    @Html.ActionLink("Скрипты", "Scripts", "Script")
+                </li>
+                <hr />
+                <li>
+                    @Html.ActionLink("Выход", "Logout", "Account")
+                </li>
+            </ul>
         </div>
     </div>
-
     <div class="container body-content">
         @RenderBody()
+        
+        @RenderSection("scpitps", required:false)
         <hr />
-        <footer>
+        @*<footer>
             <p>&copy; @DateTime.Now.Year - D.A.SHIMANOV</p>
-        </footer>
+        </footer>*@
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>

@@ -1,53 +1,67 @@
-﻿@model IEnumerable<WebApplication2.Domain.Entities.Script>
+﻿@using System.Web.Script.Services
+@using WebApplication2.Domain.Entities
+@model IEnumerable<WebApplication2.Domain.Entities.Script>
 @{
     ViewBag.Title = "Scripts";
 }
 
-<h2>Scripts</h2>
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
 
-<div>
-    <table>
-        <tr>
-            <td>Описание</td>
-            <td>Скрипт</td>
-            <td>&nbsp;</td>
-        </tr>
-        @foreach (var i in Model)
-        {
-            <tr>
-                <td>@i.Description</td>
-                <td>@i.Scripts</td>
-                
-                @if (User.IsInRole("admin"))
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4">
+            <h2>Скрипты</h2>
+            <table class="table-bordered table-responsive table-striped">
+                <tr>
+                    <td>Описание</td>
+                    <td>Скрипт</td>
+                    <td>&nbsp;</td>
+                </tr>
+                @foreach (var i in Model)
                 {
-                    <td>
-                        <span>
-                            @Html.ActionLink("Редактировать", "EditScript",
-                              new
-                              {
-                                  id = i.Id
-                              })
-                    </span>
-                    <span>|</span>
-                    <span>
-                        @Html.ActionLink("Удалить", "DeleteScript", new
-                     {
-                         id = i.Id
-                     })
-                    </span>
-                    </td>
+                    <tr>
+                        <td>@i.Description</td>
+                        <td>@i.Scripts</td>
+
+                        @if (User.IsInRole("admin"))
+                        {
+                            <td>
+                                <span>
+                                    @Html.ActionLink("Редактировать", "EditScript",
+                                        new
+                                        {
+                                            id = i.Id
+                                        })
+                                </span>
+                                <span>|</span>
+                                <span>
+                                    @Html.ActionLink("Удалить", "DeleteScript", new
+                                    {
+                                        id = i.Id
+                                    })
+                                </span>
+                                <span>|</span>
+                                <span class="scriptItem">
+                                    @Html.ActionLink("Просмотр", "DetailsScript", new {@class = "scriptItem" })
+                                </span>
+                            </td>
+                        }
+
+                    </tr>
                 }
-                
-            </tr>
-        }
-    </table>
-    
-    @if (User.IsInRole("admin"))
-    {
-        <div>
-            @Html.ActionLink("Добавить", "");
+            </table>
+
+            @if (User.IsInRole("admin"))
+            {
+                <div class="btn btn-primary link-color">
+                    @Html.ActionLink("Добавить", "AddScript")
+                </div>
+            }
         </div>
-    }
-    
+        <script src="~/Scripts/ModalWindow.js"></script>
+        
+    </div>
 </div>
 

@@ -3,29 +3,39 @@
     ViewBag.Title = "AddScript";
 }
 
-<h2>AddScript</h2>
 
-@if (User.IsInRole("admin"))
-{
-    using (Html.BeginForm("AddScript", "Script", FormMethod.Post))
-    {
-        <table>
-            <tr>
-                <td>Описание</td>
-                <td>@Html.TextBoxFor(x => x.Description)</td>
-            </tr>
-            <tr>
-                <td>Скрипт</td>
-                <td>@Html.TextBoxFor(x => x.Scripts)</td>
-            </tr>
-        </table>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4">
+            <h2>Добавить новый скрипт</h2>
+            @if (User.IsInRole("admin"))
+            {
+                using (Html.BeginForm("AddScript", "Script", FormMethod.Post))
+                {
+                    <table>
+                        <tr>
+                            <td>Описание</td>
+                            <td>@Html.TextBoxFor(x => x.Description)</td>
+                        </tr>
+                        <tr>
+                            <td>Скрипт</td>
+                            <td>@Html.TextBoxFor(x => x.Scripts)</td>
+                        </tr>
+                    </table>
 
-        <input type="submit" value="Добавить" />
-    }
-}
-else
-{
-  Response.Redirect("~/Script/Scripts");
-}
+                    <p>
+                        <input type="submit" value="Добавить" class="btn btn-primary"/>
+                    </p>
+                    
+                }
+            }
+            else
+            {
+                Response.Redirect("~/Script/Scripts");
+            }
+        </div>
+    </div>
+</div>
+
 
 
