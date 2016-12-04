@@ -9,7 +9,8 @@
 
 
 .full {
-    background: url(C:/Users/user4/Documents/html/css/img_back_login.jpg ) no-repeat center center fixed;
+    background: url('img/back.jpg') no-repeat center center fixed;
+    /*background-image: url('img/back.jpg');*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
