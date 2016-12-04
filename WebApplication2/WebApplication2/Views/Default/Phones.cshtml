@@ -3,56 +3,58 @@
     ViewBag.Title = "Phones";
 }
 
-<h2>Phones</h2>
-
-<div>
-    <table>
-        <tr>
-            <td>Почтамт</td>
-            <td>Имя фамилия</td>
-            <td>Номер телефона</td>
-            <td>&nbsp;</td>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Pochtamt</td>
-                <td>@item.Fio</td>
-                <td>@item.PhoneNumber</td>
-                @if (User.IsInRole("admin"))
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-lg-offset-4">
+            <h2>Телефонный справочник</h2>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td>Почтамт</td>
+                    <td>Имя фамилия</td>
+                    <td>Номер телефона</td>
+                    <td>&nbsp;</td>
+                </tr>
+                @foreach (var item in Model)
                 {
-                    <td>
-                        <span>
-                            @Html.ActionLink("Редактировать", "EditPhone", new
-                            {
-                                id = item.Id
-                            })
-                    </span>
-                        <span>|</span>
-                        <span>
-                        @Html.ActionLink("Удалить", "DeletePhone", new
+                    <tr>
+                        <td>@item.Pochtamt</td>
+                        <td>@item.Fio</td>
+                        <td>@item.PhoneNumber</td>
+                        @if (User.IsInRole("admin"))
+                {
+                            <td>
+                                <span>
+                                    @Html.ActionLink("Редактировать", "EditPhone", new
+                       {
+                           id = item.Id
+                       })
+                                </span>
+                                <span>|</span>
+                                <span>
+                                    @Html.ActionLink("Удалить", "DeletePhone", new
+                   {
+                       id = item.Id
+                   })
+                                </span>
+                            </td>
+                        }
+                        else
                         {
-                            id = item.Id
-                        })
-                        </span>
-                    </td>
-                }
-                else
-                {
 
+                        }
+
+                    </tr>
                 }
-                
-            </tr>
-        }
-    </table>
-    
-    @if (User.IsInRole("admin"))
-    {
-        <div>
-            @Html.ActionLink("Добавить", "AddPhone")
+            </table>
+
+            @if (User.IsInRole("admin"))
+            {
+                <div>
+                    @Html.ActionLink("Добавить", "AddPhone")
+                </div>
+            }
         </div>
-    }
-    
+    </div>
 </div>
 
 

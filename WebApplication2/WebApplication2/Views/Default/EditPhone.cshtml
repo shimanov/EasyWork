@@ -3,33 +3,45 @@
     ViewBag.Title = "EditPhone";
 }
 
-<h2>EditPhone</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4">
+            <h2>EditPhone</h2>
+             @if (User.IsInRole("admin"))
+             {
+                 using (Html.BeginForm("EditPhone", "Default", FormMethod.Post))
+                 {
+                     <div class="form-group">
+                         <div class="form-group">
+                             <label>Почтамт</label>
+                             <div class="form-group">
+                                 @Html.TextBoxFor(x => x.Pochtamt)
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label>Имя Фамилия</label>
+                             <div class="form-group">
+                                 @Html.TextBoxFor(x => x.Fio)
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label>Номер телефона</label>
+                             <div class="form-group">
+                                 @Html.TextBoxFor(x => x.PhoneNumber)
+                             </div>
+                         </div>
+                     </div>
+                    <input type="submit" value="Сохранить" class="btn btn-primary" />
+                 }
+             }
+             else
+             {
+                 Response.Redirect("~/ Default / Phones");
+             }
+        </div>
+    </div>
+</div>
 
-@if (User.IsInRole("admin"))
-{
-   using (Html.BeginForm("EditPhone", "Default", FormMethod.Post))
-   {
-    <table>
-        <tr>
-            <td>Почтамт</td>
-            <td>@Html.TextBoxFor(x => x.Pochtamt)</td>
-        </tr>
-        <tr>
-            <td>Имя Фамилия</td>
-            <td>@Html.TextBoxFor(x => x.Fio)</td>
-        </tr>
-        <tr>
-            <td>Номер телефона</td>
-            <td>@Html.TextBoxFor(x => x.PhoneNumber)</td>
-        </tr>
-    </table>
 
-    <input type="submit" value="Сохранить" />
-    }
-}
-else
-{
-    Response.Redirect("~/ Default / Phones");
-}
 
 

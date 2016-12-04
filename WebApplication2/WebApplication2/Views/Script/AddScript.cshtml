@@ -12,20 +12,23 @@
             {
                 using (Html.BeginForm("AddScript", "Script", FormMethod.Post))
                 {
-                    <table>
-                        <tr>
-                            <td>Описание</td>
-                            <td>@Html.TextBoxFor(x => x.Description)</td>
-                        </tr>
-                        <tr>
-                            <td>Скрипт</td>
-                            <td>@Html.TextBoxFor(x => x.Scripts)</td>
-                        </tr>
-                    </table>
-
-                    <p>
+                    <div class="form-group">
+                        <div>
+                            <label>Описание</label>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.Description)
+                            </div>
+                        </div>
+                        <div>
+                            <label>Скрипт</label>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.Scripts)
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                         <input type="submit" value="Добавить" class="btn btn-primary"/>
-                    </p>
+                    </div>
                     
                 }
             }

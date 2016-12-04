@@ -3,20 +3,36 @@
     ViewBag.Title = "EditScript";
 }
 
-<h2>EditScript</h2>
 
-@using (Html.BeginForm("EditScript", "Script", FormMethod.Post))
-{
-    <table>
-        <tr>
-            <td>Описание</td>
-            <td>@Html.TextBoxFor(x => x.Description)</td>
-        </tr>
-        <tr>
-            <td>Скрипт</td>
-            <td>@Html.TextBoxFor(x => x.Scripts)</td>
-        </tr>
-    </table>
 
-    <input type="submit" value="Добавить" />
-}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4">
+            <h2>Редакировать</h2>
+            @using (Html.BeginForm("EditScript", "Script", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <div>
+                        <label>Описание</label>
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.Description)
+                        </div>
+                    </div>
+                    <div>
+                        <label>Скрипт</label>
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.Scripts)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <input type="submit" value="Изменить" class="btn btn-primary"/>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+

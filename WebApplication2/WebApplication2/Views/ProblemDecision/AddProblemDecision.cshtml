@@ -3,37 +3,61 @@
     ViewBag.Title = "AddProblemDecision";
 }
 
-<h2>AddProblemDecision</h2>
 
-@if (User.IsInRole("admin"))
-{
-    using (Html.BeginForm("AddProblemDecision", "ProblemDecision", FormMethod.Post))
-    {
-        <table>
-            <tr>
-                <td>Проблема</td>
-                <td>@Html.TextBoxFor(x => x.Problem)</td>
-            </tr>
-            <tr>
-                <td>Решение проблемы</td>
-                <td>@Html.TextBoxFor(x => x.Decision)</td>
-            </tr>
-            <tr>
-                <td>Версия ЕАС ОПС</td>
-                <td>@Html.TextBoxFor(x => x.PosVersion)</td>
-            </tr>
-            <tr>
-                <td>Дата добавления</td>
-                <td>@Html.TextBoxFor(x => x.DataAdditional)</td>
-            </tr>
-        </table>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4">
+            <h2>AddProblemDecision</h2>
+            @if (User.IsInRole("admin"))
+            {
+                using (Html.BeginForm("AddProblemDecision", "ProblemDecision", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        <div>
+                            <label>Проблема</label>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.Problem)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Решение проблемы</label>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.Decision)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Версия ЕАС ОПС</label>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.PosVersion)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Дата добавления</label>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.DataAdditional)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Добавить" class="btn btn-primary"/>
+                    </div>
 
-        <input type="submit" value="Добавить" />
-    }
-}
-else
-{
-  Response.Redirect("~/ProblemDecision/ProblemDecision");
-}
+                }
+            }
+            else
+            {
+                Response.Redirect("~/ProblemDecision/ProblemDecision");
+            }
+        </div>
+    </div>
+</div>
+
+
 
 
