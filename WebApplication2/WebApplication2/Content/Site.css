@@ -3,20 +3,33 @@
     background: none;
 }
 
-.link-color {
-    color: #ffffff;
-}
-
-
-.full {
+html {
     background: url('img/back.jpg') no-repeat center center fixed;
-    /*background-image: url('img/back.jpg');*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
+.link-color {
+    color: #ffffff;
+}
+
+h1, h2 {
+    color: #000000;
+}
+
+
+
+.full {
+    background: url('img/back.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*--- MENU ---*/
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -132,3 +145,10 @@
         margin-right: 0;
     }
 }
+/*--- MENU END ---*/
+
+/*.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
