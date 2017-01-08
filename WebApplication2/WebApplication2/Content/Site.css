@@ -18,6 +18,10 @@ body {
     left: 40%;
 }
 
+.btn-primary {
+    background: #1399f8;
+}
+
 .link-color {
     color: #ffffff;
 }
@@ -25,16 +29,6 @@ body {
 h1, h2, hr {
     color: #fff;
 }
-
-
-
-/*.full {
-    background: url('img/back.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
 
 /*--- MENU ---*/
 #wrapper {
