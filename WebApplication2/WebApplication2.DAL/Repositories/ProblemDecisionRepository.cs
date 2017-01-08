@@ -11,10 +11,10 @@ namespace WebApplication2.DAL.Repositories
     {
         private EasyWorkDBContext _context = null;
 
-        public ProblemDecisionRepository()
-        {
-            _context = EasyWorkDBContext.Instance;
-        }
+        //public ProblemDecisionRepository()
+        //{
+        //    _context = EasyWorkDBContext.Instance;
+        //}
 
         public IEnumerable<ProblemDecision> GetProblemDecisions()
         {

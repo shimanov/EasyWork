@@ -6,13 +6,12 @@ namespace WebApplication.Service.Services
 {
     public class ProblemDecisionServices : Base.IProblemDecisionServices
     {
-        private IEasyWorkRepository _easyWorkRepository = null;
+        IEasyWorkRepository _easyWorkRepository = null;
 
         public ProblemDecisionServices(IEasyWorkRepository easyWorkRepository)
         {
             _easyWorkRepository = easyWorkRepository;
         }
-
 
         public IEnumerable<ProblemDecision> GetProblemDecisions() =>
             _easyWorkRepository.GetProblemDecisions();
