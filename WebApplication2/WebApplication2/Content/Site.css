@@ -1,140 +1,134 @@
-﻿html {
-    margin: 0;
-}
+﻿html { margin: 0; }
 
-body {
-    background: #4c4b51;
-}
+body { background: #4c4b51; }
 
 .parent {
     position: relative;
     top: 200px;
 }
+
 .child {
-    width: 300px;
     height: 200px;
+    left: 40%;
     padding: 20px;
     position: absolute;
-    left: 40%;
+    width: 300px;
 }
 
-.btn-primary {
-    background: #1399f8;
+.btn-primary { background: #1399f8; }
+
+.link-color { color: #ffffff; }
+
+h1, h2, hr { color: #fff; }
+
+
+/*--- SHAPE ---*/
+.border-shape {
+    background-color: #E4E0F9;
+    border-color: #afadbb;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.link-color {
-    color: #ffffff;
+.border-header {
+    padding-left: 5px;
+    text-align: center;
 }
 
-h1, h2, hr {
-    color: #fff;
-}
+.border-crud { display: inline-block; }
+
+/*--- SHAPE END ---*/
 
 /*--- MENU ---*/
+
 #wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    padding-left: 0;
     transition: all 0.5s ease;
 }
 
-    #wrapper .toggled {
-        padding-left: 250px;
-    }
+#wrapper .toggled { padding-left: 250px; }
 
 #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #1399f8;
-    -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background: #1399f8;
+    height: 100%;
+    left: 250px;
+    margin-left: -250px;
+    overflow-y: auto;
+    position: fixed;
     transition: all 0.5s ease;
+    width: 0;
+    z-index: 1000;
 }
 
-#wrapper .toggled #sidebar-wrapper {
-    width: 250px;
-}
+#wrapper .toggled #sidebar-wrapper { width: 250px; }
 
 #page-content-wrapper {
-    width: 100%;
-    position: absolute;
     padding: 15px;
+    position: absolute;
+    width: 100%;
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
     margin-right: -250px;
+    position: absolute;
 }
 
 .sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 0;
     width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
-    .sidebar-nav li {
-        text-indent: 20px;
-        line-height: 40px;
-    }
+.sidebar-nav li {
+    line-height: 40px;
+    text-indent: 20px;
+}
 
-        .sidebar-nav li a {
-            display: block;
-            text-decoration: none;
-            color: #fff;
-        }
+.sidebar-nav li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
 
-            .sidebar-nav li a:hover {
-                text-decoration: none;
-                color: #fff;
-                background: rgba(255, 255, 255, 0.2);
-            }
+.sidebar-nav li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
 
-            .sidebar-nav li a:active,
-            .sidebar-nav li a:focus {
-                text-decoration: none;
-            }
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus { text-decoration: none; }
 
-    .sidebar-nav > .sidebar-brand {
-        height: 65px;
-        font-size: 18px;
-        line-height: 60px;
-    }
+.sidebar-nav > .sidebar-brand {
+    font-size: 18px;
+    height: 65px;
+    line-height: 60px;
+}
 
-        .sidebar-nav > .sidebar-brand a {
-            color: #fff;
-        }
+.sidebar-nav > .sidebar-brand a { color: #fff; }
 
-        .sidebar-nav > .sidebar-brand:hover {
-            color: #fff;
-            background: none;
-        }
+.sidebar-nav > .sidebar-brand:hover {
+    background: none;
+    color: #fff;
+}
 
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 250px;
-    }
+@media (min-width: 768px) {
+    #wrapper { padding-left: 250px; }
 
-        #wrapper .toggled {
-            padding-left: 0;
-        }
+    #wrapper .toggled { padding-left: 0; }
 
-    #sidebar-wrapper {
-        width: 250px;
-    }
+    #sidebar-wrapper { width: 250px; }
 
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
+    #wrapper.toggled #sidebar-wrapper { width: 0; }
 
     #page-content-wrapper {
         padding: 20px;
@@ -142,8 +136,8 @@ h1, h2, hr {
     }
 
     #wrapper.toggled #page-content-wrapper {
-        position: relative;
         margin-right: 0;
+        position: relative;
     }
 }
 /*--- MENU END ---*/
