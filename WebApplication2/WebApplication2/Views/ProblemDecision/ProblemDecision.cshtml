@@ -3,59 +3,42 @@
     ViewBag.Title = "ProblemDecision";
 }
 
-
-
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 col-lg-offset-4">
+        <div class="col-md-8 col-lg-offset-2">
             <h2>ProblemDecision</h2>
-            <table class="table table-striped table-hover">
-                <tr>
-                    <td>Проблема</td>
-                    <td>решение проблемы</td>
-                    <td>Дата добавления</td>
-                    <td>Версия ЕАС ОПС</td>
-                    <td>&nbsp;</td>
-                </tr>
-                @foreach (var i in Model)
-                {
-                    <tr>
-                        <td>@i.Problem</td>
-                        <td>@i.Decision</td>
-                        <td>@i.DataAdditional</td>
-                        <td>@i.PosVersion</td>
-
-                        @if (User.IsInRole("admin"))
-                {
-                            <td>
-                                <span>
-                                    @Html.ActionLink("Редактировать", "EditProblemDecision", new
-                       {
-                           id = i.Id
-                       })
-                                </span>
-                                <span>|</span>
-                                <span>
-                                    @Html.ActionLink("Удалить", "DeleteProblemDecision", new
-                       {
-                           id = i.Id
-                       })
-                                </span>
-                            </td>
-                        }
-
-                    </tr>
-                }
-            </table>
-
             @if (User.IsInRole("admin"))
             {
-                <div>
-                    @Html.ActionLink("Добавить", "AddProblemDecision")
+                <div>@Html.ActionLink("Добавить", "AddProblemDecision")</div>
+            }
+        </div>
+        <div class="border-shape col-md-8 col-lg-offset-2">
+            @foreach (var item in Model)
+            {
+                <div class="border-header">
+                    <h4>@item.Problem</h4>
                 </div>
+                <div>
+                    <p>@item.Problem</p>
+                    <p>@item.Decision</p>
+                </div>
+                <div>
+                    <span>Дата добавления: @item.DataAdditional</span>
+                    <span>Версия ЕАС ОПС: @item.PosVersion</span>
+                </div>
+                if (User.IsInRole("admin"))
+                {
+                    <div class="border-crud">
+                        <span>
+                            @Html.ActionLink("Редактировать", "EditProblemDecision", new {id = item.Id})
+                        </span>
+                        <span>|</span>
+                        <span>
+                            @Html.ActionLink("Удалить", "DeleteProblemDecision", new {id = item.Id})
+                        </span>
+                    </div>
+                }
             }
         </div>
     </div>
 </div>
-
-
