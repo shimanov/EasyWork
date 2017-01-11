@@ -32,11 +32,11 @@
                 <hr />
             }
         </div>
+        @if (User.IsInRole("admin"))
+        {
+            <div class="btn btn-primary">
+                @Html.ActionLink("Добавить", "AddScript")
+            </div>
+        }
     </div>
 </div>
-@if (User.IsInRole("admin"))
-{
-    <div class="btn btn-primary">
-        @Html.ActionLink("Добавить", "AddScript")
-    </div>
-}
