@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Stormpath.SDK.RestSharpClient</name>
+    </assembly>
+    <members>
+        <member name="T:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient">
+            <summary>
+            RestSharp-based HTTP client for Stormpath.SDK.
+            </summary>
+        </member>
+        <member name="P:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#IHttpClient#BaseUrl">
+            <inheritdoc/>
+        </member>
+        <member name="P:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#IHttpClient#ConnectionTimeout">
+            <inheritdoc/>
+        </member>
+        <member name="P:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#IHttpClient#Proxy">
+            <inheritdoc/>
+        </member>
+        <member name="P:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#IHttpClient#IsSynchronousSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#IHttpClient#IsAsynchronousSupported">
+            <inheritdoc/>
+        </member>
+        <member name="M:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.#ctor(System.String,System.Int32,System.Net.IWebProxy,Stormpath.SDK.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient"/> class.
+            </summary>
+            <param name="baseUrl">The base URL of the remote API.</param>
+            <param name="connectionTimeout">The connection timeout (in milliseconds).</param>
+            <param name="proxy">The proxy, or <see langword="null"/> to connect directly.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#ISynchronousHttpClient#Execute(Stormpath.SDK.Http.IHttpRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Stormpath#SDK#Http#IAsynchronousHttpClient#ExecuteAsync(Stormpath.SDK.Http.IHttpRequest,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Stormpath.SDK.Extensions.Http.RestSharp.RestSharpClient.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Stormpath.SDK.Http.RestSharpHttpClientFactoryExtensions">
+            <summary>
+            Provides access to the RestSharpClient plugin by plugging into <see cref="T:Stormpath.SDK.Http.IHttpClientFactory"/>.
+            </summary>
+        </member>
+        <member name="M:Stormpath.SDK.Http.RestSharpHttpClientFactoryExtensions.RestSharpClient(Stormpath.SDK.Http.IHttpClientFactory)">
+            <summary>
+            Creates a new RestSharp-based HTTP client instance.
+            </summary>
+            <param name="factory">The factory.</param>
+            <returns>A <see cref="T:Stormpath.SDK.Http.IHttpClientBuilder">builder</see> capable of constructing an instance of the RestSharp-based HTTP client.</returns>
+        </member>
+    </members>
+</doc>

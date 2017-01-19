@@ -10,16 +10,13 @@ namespace WebApplication2.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
-        [MaxLength(20)]
+        [Required, MaxLength(20)]
         public string PhoneNumber { get; set; }
 
-        [Required]
-        [MaxLength(100)]
+        [Required, MaxLength(100)]
         public string Fio { get; set; }
 
-        [Required]
-        [MaxLength(50)]
+        [Required, MaxLength(50)]
         public string Pochtamt { get; set; }
 
         public bool IsDeleted { get; set; }

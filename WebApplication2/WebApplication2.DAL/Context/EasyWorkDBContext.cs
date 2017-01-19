@@ -21,6 +21,11 @@ namespace WebApplication2.DAL.Context
         {
         }
 
+        public static EasyWorkDBContext Create()
+        {
+            return new EasyWorkDBContext();
+        }
+
         public DbSet<PhoneBook> PhoneBooks { get; set; }
 
         public DbSet<ProblemDecision> ProblemDecisions { get; set; }

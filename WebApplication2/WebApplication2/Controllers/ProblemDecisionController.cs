@@ -1,10 +1,14 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using Stormpath.AspNet.WebApi;
 using WebApplication.Service.Services.Base;
 using WebApplication2.Domain.Entities;
 
 namespace WebApplication2.Controllers
 {
+    [Authorize]
+    [StormpathGroupsRequired("admin")]
+    [StormpathGroupsRequired("user")]
     public class ProblemDecisionController : Controller
     {
         private IProblemDecisionServices _problemDecision = null;

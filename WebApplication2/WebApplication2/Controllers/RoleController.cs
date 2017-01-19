@@ -3,11 +3,14 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using Stormpath.AspNet.WebApi;
 using WebApplication2.Models.Identity;
 
 namespace WebApplication2.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize]
+    [StormpathGroupsRequired("admin")]
+    [StormpathGroupsRequired("user")]
     public class RoleController : Controller
     {
         private ApplicationRoleManager RoleManager

@@ -6,8 +6,7 @@ namespace WebApplication2.Domain.Entities
     [Table("Groups")]
     public class Group
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public string Name { get; set; }

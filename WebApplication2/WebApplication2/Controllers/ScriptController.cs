@@ -1,10 +1,14 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using Stormpath.AspNet.WebApi;
 using WebApplication.Service.Services.Base;
 using WebApplication2.Domain.Entities;
 
 namespace WebApplication2.Controllers
 {
+    [Authorize]
+    [StormpathGroupsRequired("admin")]
+    [StormpathGroupsRequired("user")]
     public class ScriptController : Controller
     {
         private IScriptServices _scriptServices = null;
@@ -14,6 +18,7 @@ namespace WebApplication2.Controllers
             _scriptServices = scriptServices;
         }
 
+        [Authorize]
         public ActionResult Scripts()
         {
             var script = _scriptServices.GetScripts()
@@ -26,6 +31,7 @@ namespace WebApplication2.Controllers
                 }).ToArray();
             return View(script);
         }
+
 
         [HttpGet]
         public ActionResult DeleteScript(int id)
@@ -41,12 +47,14 @@ namespace WebApplication2.Controllers
             return RedirectToAction("Scripts");
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult AddScript()
         {
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult AddScript(Script script)
         {

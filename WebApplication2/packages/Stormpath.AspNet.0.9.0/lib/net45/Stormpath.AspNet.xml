@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Stormpath.AspNet</name>
+    </assembly>
+    <members>
+        <member name="T:Stormpath.AspNet.Mvc.StormpathCustomDataRequiredAttribute">
+            <summary>
+            Requires a matching Stormpath Custom Data element to be present for the user.
+            </summary>
+        </member>
+        <member name="M:Stormpath.AspNet.Mvc.StormpathCustomDataRequiredAttribute.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.AspNet.Mvc.StormpathCustomDataRequiredAttribute"/> class.
+            </summary>
+            <param name="key">The Custom Data key.</param>
+            <param name="value">The Custom Data value.</param>
+        </member>
+        <member name="M:Stormpath.AspNet.Mvc.StormpathCustomDataRequiredAttribute.#ctor(System.String,System.Object,System.Collections.Generic.IEqualityComparer{System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.AspNet.Mvc.StormpathCustomDataRequiredAttribute"/> class.
+            </summary>
+            <param name="key">The Custom Data key.</param>
+            <param name="value">The Custom Data value.</param>
+            <param name="comparer">The comparer to use when comparing Custom Data values.</param>
+        </member>
+        <member name="T:Stormpath.AspNet.Mvc.StormpathGroupsRequiredAttribute">
+            <summary>
+            Requires the user to be in a Stormpath Group.
+            </summary>
+            <remarks>
+            The functionality of this attribute matches <c>AuthorizeAttribute</c>.
+            Multiple Groups in a single attribute are treated as an OR.
+            Use multiple <c>StormpathGroupsRequiredAttribute</c> to create AND conditions.
+            </remarks>
+        </member>
+        <member name="M:Stormpath.AspNet.Mvc.StormpathGroupsRequiredAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.AspNet.Mvc.StormpathGroupsRequiredAttribute"/> class.
+            </summary>
+            <param name="allowedNamesorHrefs">The case-sensitive name or <c>href</c> of a Stormpath Group.</param>
+        </member>
+        <member name="T:Stormpath.AspNet.WebApi.StormpathCustomDataRequiredAttribute">
+            <summary>
+            Requires a matching Stormpath Custom Data element to be present for the user.
+            </summary>
+        </member>
+        <member name="M:Stormpath.AspNet.WebApi.StormpathCustomDataRequiredAttribute.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.AspNet.WebApi.StormpathCustomDataRequiredAttribute"/> class.
+            </summary>
+            <param name="key">The Custom Data key.</param>
+            <param name="value">The Custom Data value.</param>
+        </member>
+        <member name="M:Stormpath.AspNet.WebApi.StormpathCustomDataRequiredAttribute.#ctor(System.String,System.Object,System.Collections.Generic.IEqualityComparer{System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.AspNet.WebApi.StormpathCustomDataRequiredAttribute"/> class.
+            </summary>
+            <param name="key">The Custom Data key.</param>
+            <param name="value">The Custom Data value.</param>
+            <param name="comparer">The comparer to use when comparing Custom Data values.</param>
+        </member>
+        <member name="T:Stormpath.AspNet.WebApi.StormpathGroupsRequiredAttribute">
+            <summary>
+            Requires the user to be in a Stormpath Group.
+            </summary>
+            <remarks>
+            The functionality of this attribute matches <c>AuthorizeAttribute</c>.
+            Multiple Groups in a single attribute are treated as an OR.
+            Use multiple <c>StormpathGroupsRequiredAttribute</c> to create AND conditions.
+            </remarks>
+        </member>
+        <member name="M:Stormpath.AspNet.WebApi.StormpathGroupsRequiredAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Stormpath.AspNet.WebApi.StormpathGroupsRequiredAttribute"/> class.
+            </summary>
+            <param name="allowedNamesorHrefs">The case-sensitive name or <c>href</c> of a Stormpath Group.</param>
+        </member>
+    </members>
+</doc>

@@ -26,9 +26,28 @@
                 </li>
                 <hr />
                 <li>
-                    @Html.ActionLink("Выход", "Logout", "Account")
+                    <span>Хаюшки,</span><span>@Context.User.Identity.Name</span>
                 </li>
+                @*<li>
+                    <a onclick="document.getElementById('logout_form').submit();" style="cursor: pointer;">Порошок уходи</a>
+                </li>*@
             </ul>
+            @*@if (Context.User.Identity.IsAuthenticated)
+            {
+                <form action="/logout" method="post" id="logout_form">
+                    <ul class="sidebar-nav">
+                        <li>
+                            <p class="navbar-text">
+                                Хаюшки! <b>@Context.User.Identity.Name</b>
+                            </p>
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </form>
+            }*@
+
         </div>
     </div>
     <div class="container body-content">
